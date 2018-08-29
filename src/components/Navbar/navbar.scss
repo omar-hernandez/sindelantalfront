@@ -1,0 +1,16 @@
+@import '../../colors.scss';
+
+.navbar{
+    background-color: $PRIMARY_COLOR !important;
+}
+
+.nav-link {
+    color: $TEXT_COLOR !important;
+    }
+
+.cambiar-direccion{
+    background-color: greenyellow;
+    text-decoration: underline !important;
+    color: $TEXT_COLOR;
+}
+

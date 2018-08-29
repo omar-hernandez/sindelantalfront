@@ -1,0 +1,17 @@
+@import '../../colors.scss';
+
+
+.display-3{
+    color:$SECONDARY_TEXT;
+}
+
+.btn-search {
+
+    background-color: $PRIMARY_COLOR;
+    color:$TEXT_COLOR !important;
+
+}
+
+.imgjumbotron{
+    height: 100px;
+}
