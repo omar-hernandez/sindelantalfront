@@ -41,12 +41,14 @@ class Navbar extends Component{
     render(){
         return(
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <Link to="/">
                 <img src={logo} width="215" height="65"/>
+                </Link>    
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseAirbnb" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <p className="cambiar-direccion">Cambiar Dirección</p>
+              
 
                 <div className="collapse navbar-collapse" id="collapseAirbnb">
                         {this.checkAuthenticatedUser()}
@@ -66,30 +68,3 @@ export default Navbar;
 
 
 
-// render(){
-//     return(
-//         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-//             <img src={logo} width="215" height="65"/>
-//             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseAirbnb" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//                 <span className="navbar-toggler-icon"></span>
-//             </button>
-
-//             <div className="collapse navbar-collapse" id="collapseAirbnb">
-//                 <ul className="navbar-nav ml-auto">
-//                     <li className="nav-item">
-//                         <a className="nav-link">Impact Hub</a>
-//                     </li>
-//                     <li className="nav-item"> 
-//                         <a className="nav-link cambiar-direccion">Cambiar dirección</a>
-//                     </li>
-//                     <li className="nav-item"> 
-//                         <a className="nav-link">Iniciar sesión /Registrarte</a>
-//                     </li>
-//                 </ul>
-//             </div>
-        
-//         </nav>
-//     )
-
-
-// }

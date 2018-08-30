@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './signup.scss'
 import GenereicInput from '../GenericInput/GenericInput';
 import services from '../../services'
 
@@ -37,7 +37,7 @@ submitForm = (event)=>{
           console.log(err.response.data)
         })
     }else{
-        alert("PW no coinciden")
+        alert("Las contraseñas no coinciden")
     }
 }
 
@@ -47,7 +47,7 @@ checkPassword = () =>{
 
   render() {
     return (
-      <div className="row justify-content-center">
+      <div className="row justify-content-center signup-form">
         <div className="col-md-10 col-lg-8">
           <form role="form" onSubmit={this.submitForm}>
             <GenereicInput
@@ -87,27 +87,27 @@ checkPassword = () =>{
               change={this.chekInput}
             />
 
-            <div className="from-group">
+            <div className="from-group genre">
               <label>Genero</label>
               <select
                 name="genero"
                 id="genero"
                 onChange={this.chekInput}
                 value={this.state.genero}
-              >
+                className="btn btn-info genre-dropdown">
                 <option value="H">Hombre</option>
                 <option value="M">Mujer</option>
               </select>
             </div>
 
-            <div className="from-group">
+            <div className="from-group location">
               <label>Ubicacion</label>
               <select
                 name="ubicacion"
                 id="ubicacion"
                 onChange={this.ubicacion}
                 value={this.state.ubicacion}
-              >
+                className="btn btn-info location-dropdown">
                 <option value="MX">México</option>
                 <option value="US">USA</option>
                 <option value="CA">Canadá</option>
@@ -115,7 +115,7 @@ checkPassword = () =>{
                 <option value="BZ">Belice</option>
               </select>
             </div>
-            <button type="submit" className="btn btn-signup mb-3">Enviar</button>  
+            <button type="submit" className="btn btn-success float-right">Enviar</button>  
           </form>
         </div>
       </div>

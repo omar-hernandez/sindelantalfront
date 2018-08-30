@@ -36,19 +36,17 @@ class Login extends Component{
 
     render(){
         return(
-            <div className="row justify-content-center mt-5">
-                <div className="col-md-10 col-lg-8">
+            <div className="row d-flex flex-row justify-content-center align-items-center login-form">
                     <form action="" onSubmit={this.formSubmit}>
                         <GenericInput type={"text"} name={"username"} value={this.state.username} change={this.chekInput} />
 
                         <GenericInput type={"password"} name={"password"} value={this.state.password} change={this.chekInput} />
 
                         <div className="text-center">
-                            <button type="submit" className="btn btn-login mx-auto">Empezar</button>
+                            <button type="submit" className="btn btn-success btn-lg btn-block">Empezar</button>
                         </div>    
                     </form>
                 </div>
-            </div>
         )
     }
 
