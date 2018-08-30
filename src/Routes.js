@@ -28,7 +28,7 @@ class Routes extends Component{
                         <Route exact path='/logout' component={Logout}/>
                         <Route exact path='/restaurantes' component={RestaurantesList}/>
                         <Route exact path='/restaurante/:id' component={DetailRestaurante}/>
-                        <Route exact path='/restaurante/new' component={FormTienda}/>
+                        <Route exact path='/newrestaurante' component={FormTienda}/>
                     </main>
                 </ApolloProvider>
                 
