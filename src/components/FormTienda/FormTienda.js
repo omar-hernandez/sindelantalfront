@@ -33,13 +33,13 @@ class FormTienda extends Component{
 
         this.state = {
             nombre: "",
-            user: payload().id,
-            tipo:[],
+            // user: payload().id,
+            tipo:"",
             telefono:55453,
             direccion:"",
             descripcion:"",
             nivel_precio:1,
-            foto_tiendas:[]
+            // foto_tiendas:[]
         }
     }
 
@@ -50,18 +50,18 @@ class FormTienda extends Component{
         })
     }
 
-    handleUploadSuccess = (filename) => {
-        Firebase.storage().ref('images').child(filename)
-            .getDownloadURL().then(url=> {
-                this.setState(prevState => ({
-                    foto_tiendas:[...prevState.foto_tiendas,url]
-                }))
-            })
-    }
+    // handleUploadSuccess = (filename) => {
+    //     Firebase.storage().ref('images').child(filename)
+    //         .getDownloadURL().then(url=> {
+    //             this.setState(prevState => ({
+    //                 foto_tiendas:[...prevState.foto_tiendas,url]
+    //             }))
+    //         })
+    // }
 
-    handleUploadError = (error) => {
-        console.log(error)
-    }
+    // handleUploadError = (error) => {
+    //     console.log(error)
+    // }
 
     checkCalendarInput = (name,value) => {
         this.setState({
@@ -77,7 +77,7 @@ class FormTienda extends Component{
             tipo:array
         })
        }else{
-        let array = [...this.state.tipo]; // make a separate copy of the array
+        let array = [...this.state.tipo]; 
         let index = array.indexOf(event.target.name)
         console.log(this.state.tipo)
         array.splice(index, 1);
@@ -165,7 +165,7 @@ class FormTienda extends Component{
                                     </select>
                                 </div>
 
-                                <div className="form-group">
+                                {/* <div className="form-group">
                                     <label className="btn btn-danger">
                                         Agrega Imagenes
                                         <FileUploader
@@ -178,7 +178,7 @@ class FormTienda extends Component{
                                             onUploadSuccess={this.handleUploadSuccess}
                                         />
                                     </label>
-                                </div>                            
+                                </div>                             */}
 
                                 <div className="form-group">
                                     <label htmlFor=""> Tipo de Restaurante: </label>
