@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import RestauranteCard from './RestauranteCard/RestauranteCard';
 import gql from 'graphql-tag';
 import {Query} from 'react-apollo' ;
+import Footer from '../Footer/Footer'
 
 
 const GET_HOUSES = gql`
@@ -50,6 +51,7 @@ class RestaurantesList extends Component{
 
                             </div>
                         ))}
+                        <Footer/>
                     </div>
                 )
             }}

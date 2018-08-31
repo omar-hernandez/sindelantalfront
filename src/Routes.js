@@ -11,7 +11,7 @@ import Logout from './components/Logout/Logout';
 import {ApolloProvider} from 'react-apollo';
 import DetailRestaurante from './components/DetailRestaurante/DetailRestaurante';
 import FormTienda from './components/FormTienda/FormTienda'
-// import FormTienda from './components/Pago'
+import Pago from './components/Pago/Pago'
 import client from './graphql'
 import RestaurantesList from './components/RestaurantesList/RestaurantesList';
 
@@ -30,7 +30,7 @@ class Routes extends Component{
                         <Route exact path='/restaurantes' component={RestaurantesList}/>
                         <Route exact path='/restaurante/:id' component={DetailRestaurante}/>
                         <Route exact path='/newrestaurante' component={FormTienda}/>
-                        <Route exact path='/newrestaurante' component={FormTienda}/>
+                        <Route exact path='/Pago' component={Pago}/>
                     </main>
                 </ApolloProvider>
                 
