@@ -10,6 +10,9 @@ class Navbar extends Component{
         if (isAuthenticated()){
             return(
                 <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                        <Link className="nav-link newRes" to="/newrestaurante">Crear Restaurante</Link>
+                    </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/logout">Logout</Link>
                     </li>

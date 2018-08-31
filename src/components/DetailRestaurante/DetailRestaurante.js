@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import gql from 'graphql-tag';
 import {Query} from 'react-apollo';
 
+import './detailRestaurante.scss';
+
 const GET_RESTAURANTE = gql`
 
     query HOUSE($id:ID!){
@@ -49,27 +51,33 @@ class DetailRestaurante extends Component{
                     let tienda = data.singleTienda
 
                     return(
-                        <div className="row justify-content center">
-                            <div> 
+                        <div className="row d-flex flex-row justify-content-center align-items-center">
+                            <div className="restCont justify-content-center"> 
                                 <div className="col-lg-12 col-ms-12">
-                                    <h4>{tienda.nombre}</h4>
-                                    <img className="card-img-top" src={tienda.foto_tiendas} alt="Card image cap"/>
+                                    <div className="d-flex flex-row justify-content-center align-items-center backgroundImg">
+                                        <img className="card-img-top img-fluid img-thumbnail mx-auto restLogo" src={tienda.foto_tiendas} alt="Card image cap"/>
+                                    </div>
+                                    <h1 className="restName text-center">{tienda.nombre}</h1>
                                 </div>
-                                <div className="col-md-8 col-lg-8">
-                                    <h5>Nivel de precios {tienda.nivel_precio}</h5>
-                                    <h5>{tienda.descripcion}</h5>
+                                <div className="col-md-8 col-lg-8 restDescr">
+                                    <h5>Nivel de precio: {tienda.nivel_precio}</h5>
+                                    <h5 className="descType">{tienda.descripcion}</h5>
                                 </div>
                             </div>
                             <div className="col-12 justify-content center">
+                                <h1 className="dishes text-center">Platillos</h1>
                                 <div className="card">
-                                    <h5>Platillos</h5>
                                     {
                                         tienda.productos.map((productos)=>(
-                                            <div className="card">
-                                                <h5>{productos.nombre}</h5>
-                                                <p>{productos.descripcion}</p> 
-                                                <p>{productos.precio}</p> 
-                                                <img className="card-img-top" src={productos.fotos_producto} alt="Card image cap"/>
+                                            <div className="card foodCard ">
+                                                <div className="d-flex flex-row justify-content-center align-items-center">
+                                                    <img className="card-img-top foodImg img-thumbnail" src={productos.fotos_producto} alt="Card image cap"/>
+                                                </div>
+                                                <div className="foodDesc ">
+                                                    <h5 className="productName">{productos.nombre}</h5>
+                                                    <p className="foodD">{productos.descripcion}</p> 
+                                                    <p className="foodD">Precio: ${productos.precio}</p> 
+                                                </div>  
                                             </div>    
                                         ))    
                                     }

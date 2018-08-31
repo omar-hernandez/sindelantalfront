@@ -1,0 +1,75 @@
+.restLogo{
+    width: 700px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.restName{
+    margin-top: 1em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-family: 'Anton', sans-serif;
+    text-decoration: underline;
+    font-size: 3.5em;
+}
+
+.backgroundImg{
+    background-image: url('http://getdrawings.com/images/junk-food-drawing-1.jpg');
+}
+
+.restDescr{
+    width: 100%;
+}
+
+.restCont{
+    width: 100%;
+}
+
+.descType{
+    margin-top: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+.productName{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: .5em;
+    margin-left: .5em;
+}
+
+.dishes{
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-family: 'Anton', sans-serif;
+    text-decoration: underline;
+}
+
+
+.foodImg{
+    width: 400px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.foodCard {
+    margin-bottom: 1.5em;
+    border-style: solid;
+    background-image: url('https://ii.worldmarket.com/fcgi-bin/iipsrv.fcgi?FIF=/images/worldmarket/source/16082_XXX_v1.tif&wid=2000&cvt=jpeg');
+    background-size: cover;
+}
+
+.foodDesc{
+    position: relative;
+    background-color: white;
+    margin-bottom: 1em;
+    border-style: solid;
+    border-color: lightgray;
+
+}
+
+.foodD{
+    font-size: 17px;
+    margin-left: .5em;
+}
