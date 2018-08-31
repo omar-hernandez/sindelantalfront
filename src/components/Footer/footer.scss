@@ -1,0 +1,25 @@
+@import '../../colors.scss';
+
+.Footer{
+    background-color:$PRIMARY_TEXT;
+    color:$DIVIDER_COLOR;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    &-titulo{
+        font-size: 16px;
+        padding-top: 1em; 
+    }
+
+    &-text{
+        font-size: 12px;
+        padding: 1px;
+        margin: 1px;
+        &:hover{
+            text-decoration: underline;
+        }
+
+    }
+}
+

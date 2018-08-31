@@ -6,7 +6,10 @@ import {Link} from 'react-router-dom';
 
 
 class Jumbotron extends Component{
-
+    constructor(props) {
+        super(props);
+      this.state = { term: '' };
+       }
 
     render(){
         return(
@@ -21,7 +24,7 @@ class Jumbotron extends Component{
                         <label className="sr-only" htmlFor="search">Busqueda:</label>
                                 <div className="input-group ">
                                     <input type="search" name="search" id="search" 
-                                    className="form-control  homesearch" placeholder="Escribe tu calle, número y colonia"/>
+                                    className="form-control  homesearch" placeholder="Escribe tu calle, número y colonia" value={this.state.term} onChange={event => this.onInputChange(event.target.value)} />
                                 </div>
                                 <Link to="/restaurantes">
                                 <button type="button" className="btn btn-search my-2" >Buscar restaurantes</button>
@@ -37,7 +40,11 @@ class Jumbotron extends Component{
 
     }
 
-
+    onInputChange(term) {
+        this.setState({term});
+        this.props.onSearchTermChange(term);
+       }
+       
 }
 
 
