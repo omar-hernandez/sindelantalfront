@@ -36,6 +36,7 @@ class Login extends Component{
 
     render(){
         return(
+            <div className="container-fluid">
             <div className="row d-flex flex-row justify-content-center align-items-center login-form">
                     <form action="" onSubmit={this.formSubmit}>
                         <GenericInput type={"text"} name={"username"} value={this.state.username} change={this.chekInput} />
@@ -47,6 +48,8 @@ class Login extends Component{
                         </div>    
                     </form>
                 </div>
+            </div>
+           
         )
     }
 

@@ -115,8 +115,11 @@ class FormTienda extends Component {
 
   render() {
     return (
-      <Mutation mutation={CREATE_TIENDA}>
+
+        <div className="container-fluid">
+        <Mutation mutation={CREATE_TIENDA}>
         {(addTiendas, { data }) => (
+            
           <div className="row justify-content-center">
             <div className="createForm">
               <form onSubmit={e => this.onFormSubmit(e, addTiendas)}>
@@ -196,6 +199,8 @@ class FormTienda extends Component {
           </div>
         )}
       </Mutation>
+        </div>
+      
     );
   }
 }

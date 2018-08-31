@@ -42,7 +42,8 @@ class RestaurantesList extends Component{
                 if(error) return (<h4>No hay restaurantes</h4>);
 
                 return(
-                    <div className="row justify-content-center mt-5">
+                    <div className="container-fluid">
+                        <div className="row justify-content-center mt-5">
                         {data.allTiendas.map((tienda)=>(
                             <div className="col-md-3 col-lg-2">
                                 <RestauranteCard tienda={tienda}
@@ -51,6 +52,13 @@ class RestaurantesList extends Component{
 
                             </div>
                         ))}
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
                         <Footer/>
                     </div>
                 )

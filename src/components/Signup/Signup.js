@@ -47,6 +47,7 @@ checkPassword = () =>{
 
   render() {
     return (
+      <div className="container-fluid">
       <div className="row justify-content-center signup-form">
         <div className="col-md-10 col-lg-8">
           <form role="form" onSubmit={this.submitForm}>
@@ -119,6 +120,8 @@ checkPassword = () =>{
           </form>
         </div>
       </div>
+      </div>
+     
     );
   }
 }

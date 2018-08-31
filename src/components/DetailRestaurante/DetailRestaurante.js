@@ -44,6 +44,8 @@ class DetailRestaurante extends Component{
 
     render(){
         return(
+
+            <div className="container-fluid">
             <Query query={GET_RESTAURANTE} variables={{id:this.state.id}}>
                 {({loading,error,data}) =>{
                     if(loading) return (<h4>Loading...</h4>)
@@ -51,6 +53,7 @@ class DetailRestaurante extends Component{
                     let tienda = data.singleTienda
 
                     return(
+                        
                         <div className="row d-flex flex-row justify-content-center align-items-center">
                             <div className="restCont justify-content-center"> 
                                 <div className="col-lg-12 col-ms-12">
@@ -87,6 +90,9 @@ class DetailRestaurante extends Component{
                     )
                 }}
             </Query>
+            </div>
+
+           
         )
     }
 
